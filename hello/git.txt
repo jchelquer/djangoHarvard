@@ -1,0 +1,19 @@
+
+git clone https:..... 	Crea un directorio Git local. El https aparece en Github en el repositorio en cuestión.
+git add archivo			Para que siga a un archivo y lo guarde en el próximo commit
+git commit -m "mensaje"	Hace un commit con un texto descriptivo
+git commit -am "mensaje" Hace git add de todo lo cambiado y luego commit
+git status				Ver en qué estado está
+git log					Historial
+git reset --hard <hash de un commit)
+git reset --hard origin/master
+
+HEAD: es lo que indica en qué rama estoy trabajando
+
+git branch
+git checkout -b nueva rama
+git checkout rama existente 
+git merge rama (unifica con la actual)
+
+
+-----------Algo nuevo-----------------------------------
