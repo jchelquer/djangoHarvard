@@ -30,3 +30,4 @@ En urls.py de la app:
         <int:nombre de variable>
         <alug:...  <uuid:...
     p.ej. path ("<str>:textoMes>-<int:año>)
+    
