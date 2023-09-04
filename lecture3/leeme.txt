@@ -1,0 +1,32 @@
+Entorno virtual
+    pipenv install
+    pipenv shell    lo que sigue está en el entorno virtual
+    pipenv --venv   para ver si estamos en un entorno virtual y cuál
+    exit            salir del entorno virtual
+
+Crear proyecto
+    django-admin startproject nombre_proyecto
+
+Crear app
+    python manage.py startapp nombre_aplicación  (estando en la carpeta del proyecto)
+    instalar la app en settings.py del proyecto
+
+Servidor de desarrollo
+    python manage.py runserver
+    python manage.py makemigrations             para que esté admin, auth y otros.
+
+
+En views.py de la app:
+    from django.shortcuts import render
+    from django.http import HttpResponse
+
+En urls.py de la app:
+    from django.urls import path
+    from  . import views
+
+    path("ruta", vista, name="nombre") 
+    la ruta puede tener especie de expr. regulares como:
+        <str:nombre de variable>
+        <int:nombre de variable>
+        <alug:...  <uuid:...
+    p.ej. path ("<str>:textoMes>-<int:año>)
