@@ -16,4 +16,12 @@ git checkout rama existente
 git merge rama (unifica con la actual)
 
 
+git remote -v       verifica qué se estableció como remoto (p.ej. github)
+git remote add origin URL_del_repositorio_GitHub  agregar un repositorio remoto
+git pull    Actualiza con datos remotos de Github
+git push    Manda los datos 
+
+
+
+
 -----------Algo nuevo-----------------------------------

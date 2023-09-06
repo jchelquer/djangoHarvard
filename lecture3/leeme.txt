@@ -19,6 +19,10 @@ Servidor de desarrollo
 En views.py de la app:
     from django.shortcuts import render
     from django.http import HttpResponse
+    y funciones que ejecutan HttResponse o render
+
+    No me queda claro por qué al usar render se acostumbra que las plantillas (que van en templates dentro de la app) estén a su vez dentro
+    de una carpeta con el nombre de la app... Si hay que pasarle variables, van como un diccionario entre {}
 
 En urls.py de la app:
     from django.urls import path
@@ -30,4 +34,16 @@ En urls.py de la app:
         <int:nombre de variable>
         <alug:...  <uuid:...
     p.ej. path ("<str>:textoMes>-<int:año>)
-    
+
+Plantillas:
+    {{ variable }} (la variable debe estar en el diccionario que le pasa el render)
+    {% código, p.ej. if, else, endif %}
+
+    Para plantillas similars, se puede hacer un modelo de layout e INHERIT de él.
+    En el layout, los espacios a completar:
+        {% block nombre %}
+        {$ endblock % }
+        y lo mismo en los templates donde sólo se hace el extents
+        y con marcadores de bloque y endbloq el contenido específico.
+        {% url nombre %} reemplaz el nombre por el que le hayamos dado en las rutas
+        
